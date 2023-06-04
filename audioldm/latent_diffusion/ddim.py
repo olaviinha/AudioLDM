@@ -284,7 +284,8 @@ class DDIMSampler(object):
         # print(f"Running DDIM Sampling with {total_steps} timesteps")
 
         # iterator = gr.Progress().tqdm(time_range, desc="Decoding image", total=total_steps)
-        iterator = tqdm(time_range, desc="Decoding image", total=total_steps)
+        # iterator = tqdm(time_range, desc="Decoding image", total=total_steps)
+        iterator = total_steps
         x_dec = x_latent
 
         for i, step in enumerate(iterator):
