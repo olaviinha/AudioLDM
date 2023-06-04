@@ -202,7 +202,8 @@ class DDIMSampler(object):
         # print(f"Running DDIM Sampling with {total_steps} timesteps")
 
         # iterator = gr.Progress().tqdm(time_range, desc="DDIM Sampler", total=total_steps)
-        iterator = tqdm(time_range, desc="DDIM Sampler", total=total_steps)
+        # iterator = tqdm(time_range, desc="DDIM Sampler", total=total_steps)
+        iterator = range(total_steps)
 
         for i, step in enumerate(iterator):
             index = total_steps - i - 1
